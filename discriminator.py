@@ -1,3 +1,6 @@
+# Number of GPUs available. Use 0 for CPU mode.
+ngpu = 1
+
 class Discriminator(nn.Module):
     def __init__(self, ngpu):
         super(Discriminator, self).__init__()
