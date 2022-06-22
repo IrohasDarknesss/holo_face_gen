@@ -1,4 +1,25 @@
 # -*- coding: utf-8 -*-
+from __future__ import print_function
+#%matplotlib inline
+import argparse
+import os
+import random
+import torch
+import torch.nn as nn
+import torch.nn.parallel
+import torch.backends.cudnn as cudnn
+import torch.optim as optim
+import torch.utils.data
+import torchvision.datasets as dset
+import torchvision.transforms as transforms
+import torchvision.utils as vutils
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from IPython.display import HTML
+from generator import Generator
+from discriminator import Discriminator
+
 dataroot = "./anime_face_gen/dataset/"
 
 # Number of workers for dataloader
@@ -35,25 +56,6 @@ beta1 = 0.5
 
 # Number of GPUs available. Use 0 for CPU mode.
 ngpu = 1
-
-from __future__ import print_function
-#%matplotlib inline
-import argparse
-import os
-import random
-import torch
-import torch.nn as nn
-import torch.nn.parallel
-import torch.backends.cudnn as cudnn
-import torch.optim as optim
-import torch.utils.data
-import torchvision.datasets as dset
-import torchvision.transforms as transforms
-import torchvision.utils as vutils
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-from IPython.display import HTML
 
 # We can use an image folder dataset the way we have it setup.
 # Create the dataset
