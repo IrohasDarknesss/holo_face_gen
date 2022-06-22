@@ -228,7 +228,7 @@ ani = animation.ArtistAnimation(fig, ims, interval=1000, repeat_delay=1000, blit
 HTML(ani.to_jshtml())
 
 #アニメーションを保存
-ani.save("./drive/MyDrive/anime_face_gen/animation/anime_new.gif", writer="pillow")
+ani.save("./anime_face_gen/animation/anime_new.gif", writer="pillow")
 
 # Grab a batch of real images from the dataloader
 real_batch = next(iter(dataloader))
@@ -247,5 +247,5 @@ plt.title("Fake Images")
 plt.imshow(np.transpose(img_list[-1],(1,2,0)))
 plt.show()
 #画像を保存
-fig.savefig("./drive/MyDrive/anime_face_gen/result/img_anime_old.png")
+fig.savefig("./anime_face_gen/result/img_anime_old.png")
 
